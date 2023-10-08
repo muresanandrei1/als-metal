@@ -13,6 +13,7 @@ export default function Contact() {
           <form
             data-netlify="true"
             name="contact"
+            method="POST"
             className="px-8 py-6 lg:py-10 lg:order-1 bg-[#181818] lg:rounded-tl-2xl rounded-bl-2xl rounded-br-2xl lg:rounded-br-none"
           >
             <div className="mx-auto lg:mr-0">
