@@ -8,11 +8,13 @@ import ContrastSection from "../components/contrastSection";
 import Services from "../components/services";
 import YellowSection from "../components/yellowSection";
 import Objectives from "../components/objectives";
+import Portfolio from "../components/portfolio";
+import Contact from "../components/contact";
 
 const IndexPage = () => {
   const { t } = useTranslation();
   return (
-    <main>
+    <>
       <Header />
       <Section1 />
       <Services />
@@ -20,7 +22,9 @@ const IndexPage = () => {
       <About />
       <YellowSection />
       <Objectives />
-    </main>
+      <Portfolio />
+      <Contact />
+    </>
   );
 };
 

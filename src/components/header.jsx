@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { graphql } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { useTranslation, Link, useI18next } from "gatsby-plugin-react-i18next";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -35,7 +36,7 @@ export default function Header() {
   useEffect(() => {
     const selectedLng = languages.find((el) => el.lng === language);
     setSelectedLanguage(selectedLng);
-  }, language);
+  }, [language]);
 
   return (
     <header className="bg-white">
@@ -44,9 +45,9 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <AnchorLink href="#" className="-m-1.5 p-1.5">
             <img className="h-16 w-auto" src="static/logo.png" alt="" />
-          </a>
+          </AnchorLink>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -60,30 +61,30 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              <p>{t("menu.about")}</p>
-            </a>
-            <a
-              href="#"
+            <AnchorLink
+              to="/#services"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               <p>{t("menu.services")}</p>
-            </a>
-            <a
-              href="#"
+            </AnchorLink>
+            <AnchorLink
+              to="/#about"
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
+              <p>{t("menu.about")}</p>
+            </AnchorLink>
+            <AnchorLink
+              to="/#portfolio"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               <p>{t("menu.portfolio")}</p>
-            </a>
-            <a
-              href="#"
+            </AnchorLink>
+            <AnchorLink
+              to="/#contact"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               <p>{t("menu.contact")}</p>
-            </a>
+            </AnchorLink>
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
                 {selectedLanguage && (
@@ -205,30 +206,34 @@ export default function Header() {
                     </>
                   )}
                 </Disclosure>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  <p>{t("menu.about")}</p>
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                <AnchorLink
+                  to="/#services"
+                  className="text-md font-semibold leading-6 text-gray-900"
+                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
                   <p>{t("menu.services")}</p>
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                </AnchorLink>
+                <AnchorLink
+                  to="/#about"
+                  className="text-md font-semibold leading-6 text-gray-900"
+                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                >
+                  <p>{t("menu.about")}</p>
+                </AnchorLink>
+                <AnchorLink
+                  to="/#portfolio"
+                  className="text-md font-semibold leading-6 text-gray-900"
+                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
                   <p>{t("menu.portfolio")}</p>
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                </AnchorLink>
+                <AnchorLink
+                  to="/#contact"
+                  className="text-md font-semibold leading-6 text-gray-900"
+                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
                   <p>{t("menu.contact")}</p>
-                </a>
+                </AnchorLink>
               </div>
             </div>
           </div>

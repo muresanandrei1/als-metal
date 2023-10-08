@@ -11,6 +11,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/locales`,

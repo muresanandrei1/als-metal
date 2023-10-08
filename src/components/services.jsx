@@ -39,7 +39,7 @@ export default function Services() {
 
   return (
     <section id="services">
-      <div className="isolate -z-10 mb-40 mt-12">
+      <div className="isolate mb-40 mt-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="uppercase text-center text-4xl leading-8 text-gray-900 font-uppercase mb-4 tracking-widest">
             <span className="font-bold">{t("servicesSection.titleBold")} </span>
@@ -51,6 +51,7 @@ export default function Services() {
           <div className="mx-auto md:mt-40 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
             {items.map((item) => (
               <div
+                key={item.name}
                 className={`col-span-2 max-h-12 w-full object-contain lg:col-span-1 ${item.extraClasses} flex flex-col items-center justify-center mt-32`}
               >
                 <img
@@ -60,7 +61,7 @@ export default function Services() {
                   width={158}
                   height={48}
                 />
-                <p class="mt-4">{item.name}</p>
+                <p className="mt-4">{item.name}</p>
               </div>
             ))}
           </div>
