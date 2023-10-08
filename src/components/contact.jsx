@@ -73,6 +73,7 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
+              <input type="hidden" name="form-name" value="contact"></input>
               <div className="mt-8 flex justify-end">
                 <button
                   type="submit"
