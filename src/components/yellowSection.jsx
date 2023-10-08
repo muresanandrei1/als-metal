@@ -1,0 +1,43 @@
+import React from "react";
+import { graphql } from "gatsby";
+import { useTranslation } from "gatsby-plugin-react-i18next";
+
+export default function YellowSection() {
+  const { t } = useTranslation();
+
+  return (
+    <section id="yellow">
+      <div className="relative isolate -z-10 overflow-hidden bg-gradient-to-b from-indigo-100/20 mb-24 h-[500px] lg:h-[400px] relative flex">
+        <div className="pointer-events-none absolute w-[150%] bottom-[-200px] right-[-100px] bg-[#FFD600] h-[650px] lg:h-[440px] rotate-[350deg]" />
+        <div className="mx-auto mt-10 max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row justify-end relative z-2 align-center lg:mt-auto lg:ml-auto lg:mr-[100px] gap-8 mb-12">
+          <img
+            src="static/cogs.png"
+            class="aspect-[16/9] h-auto w-[240px] mx-auto"
+          />
+          <div className="max-w-[420px]">
+            <p className="text-base">
+              <span className="italic text-2xl">{t("infoSection.title")} </span>
+              {t("infoSection.info1")}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(
+      filter: { ns: { in: ["index"] }, language: { eq: $language } }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
