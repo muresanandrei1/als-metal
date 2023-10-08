@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="relative isolate bg-[#FFCC17] py-20 px-10">
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 bg-white rounded-2xl shadow-[-2rem_2rem_#92858F]">
           <form
-            netlify
+            data-netlify="true"
             name="contact"
             className="px-8 py-6 lg:py-10 lg:order-1 bg-[#181818] lg:rounded-tl-2xl rounded-bl-2xl rounded-br-2xl lg:rounded-br-none"
           >
