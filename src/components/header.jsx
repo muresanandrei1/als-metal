@@ -7,6 +7,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import RoIcon from "../assets/ro.svg";
 import UkIcon from "../assets/uk.svg";
+import logo from "../assets/logo.svg";
 
 const languages = [
   {
@@ -39,54 +40,54 @@ export default function Header() {
   }, [language]);
 
   return (
-    <header className="bg-white">
+    <header className="bg-[#252525] fixed w-full z-10">
       <nav
         className="mx-auto flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <AnchorLink href="#" className="-m-1.5 p-1.5">
-            <img className="h-16 w-auto" src="static/logo.png" alt="" />
+          <AnchorLink href="#" className="-m-1.5">
+            <img className="h-16 w-auto" src={logo} alt="" />
           </AnchorLink>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end bg-[#252525]">
+          <Popover.Group className="hidden lg:flex lg:gap-x-12 bg-[#252525]">
             <AnchorLink
               to="/#services"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-white"
             >
               <p>{t("menu.services")}</p>
             </AnchorLink>
             <AnchorLink
               to="/#about"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-white"
             >
               <p>{t("menu.about")}</p>
             </AnchorLink>
             <AnchorLink
               to="/#portfolio"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-white"
             >
               <p>{t("menu.portfolio")}</p>
             </AnchorLink>
             <AnchorLink
               to="/#contact"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-white"
             >
               <p>{t("menu.contact")}</p>
             </AnchorLink>
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
                 {selectedLanguage && (
                   <img
                     className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
@@ -109,7 +110,7 @@ export default function Header() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute top-full z-10 mt-3 overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                <Popover.Panel className="absolute top-full z-10 mt-3 overflow-hidden rounded-3xl bg-[#252525] shadow-lg ring-1 ring-gray-900/5">
                   <div>
                     {languages
                       .filter((el) => el.lng !== language)
@@ -119,7 +120,7 @@ export default function Header() {
                           className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                         >
                           <Link to={originalPath} language={item.lng}>
-                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-[#252525]">
                               <img
                                 className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                                 aria-hidden="true"
@@ -143,16 +144,11 @@ export default function Header() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#252525] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="#" className="-m-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-12 w-auto"
-                src="static/logo.png"
-                alt="logo"
-                width="300"
-              />
+              <img className="h-16 w-auto" src={logo} alt="logo" width="300" />
             </a>
             <button
               type="button"
@@ -166,13 +162,41 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                <AnchorLink
+                  to="/#services"
+                  className="text-xl leading-6 text-white py-1 block"
+                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                >
+                  <p>{t("menu.services")}</p>
+                </AnchorLink>
+                <AnchorLink
+                  to="/#about"
+                  className="text-xl leading-6 text-white py-1 block"
+                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                >
+                  <p>{t("menu.about")}</p>
+                </AnchorLink>
+                <AnchorLink
+                  to="/#portfolio"
+                  className="text-xl leading-6 text-white py-1 block"
+                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                >
+                  <p>{t("menu.portfolio")}</p>
+                </AnchorLink>
+                <AnchorLink
+                  to="/#contact"
+                  className="text-xl leading-6 text-white py-1 block"
+                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                >
+                  <p>{t("menu.contact")}</p>
+                </AnchorLink>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <Disclosure.Button className="flex items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white bg-[#252525]">
                         {selectedLanguage && (
                           <img
-                            className="h-6 w-6 text-gray-600 group-hover:text-indigo-600 mr-2"
+                            className="h-6 w-6 text-gray-600 mr-2"
                             aria-hidden="true"
                             src={selectedLanguage.icon}
                           />
@@ -192,10 +216,10 @@ export default function Header() {
                             <Link to={originalPath} language={item.lng}>
                               <Disclosure.Button
                                 key={item.name}
-                                className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white"
+                                className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-[#252525] group-hover:bg-[#252525]"
                               >
                                 <img
-                                  className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                                  className="h-6 w-6 text-gray-600"
                                   aria-hidden="true"
                                   src={item.icon}
                                 />
@@ -206,34 +230,6 @@ export default function Header() {
                     </>
                   )}
                 </Disclosure>
-                <AnchorLink
-                  to="/#services"
-                  className="text-md font-semibold leading-6 text-gray-900"
-                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
-                >
-                  <p>{t("menu.services")}</p>
-                </AnchorLink>
-                <AnchorLink
-                  to="/#about"
-                  className="text-md font-semibold leading-6 text-gray-900"
-                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
-                >
-                  <p>{t("menu.about")}</p>
-                </AnchorLink>
-                <AnchorLink
-                  to="/#portfolio"
-                  className="text-md font-semibold leading-6 text-gray-900"
-                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
-                >
-                  <p>{t("menu.portfolio")}</p>
-                </AnchorLink>
-                <AnchorLink
-                  to="/#contact"
-                  className="text-md font-semibold leading-6 text-gray-900"
-                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
-                >
-                  <p>{t("menu.contact")}</p>
-                </AnchorLink>
               </div>
             </div>
           </div>

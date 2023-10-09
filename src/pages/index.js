@@ -10,6 +10,7 @@ import YellowSection from "../components/yellowSection";
 import Objectives from "../components/objectives";
 import Portfolio from "../components/portfolio";
 import Contact from "../components/contact";
+import favicon from "../assets/favicon-32x32.png";
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -30,7 +31,12 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => (
+  <>
+    <title>ALS Metal-Innovation</title>
+    <link rel="icon" type="image/png" sizes="32x32" href={favicon}></link>
+  </>
+);
 
 export const query = graphql`
   query ($language: String!) {

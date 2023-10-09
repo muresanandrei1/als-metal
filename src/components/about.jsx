@@ -1,18 +1,19 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { useTranslation } from "gatsby-plugin-react-i18next";
+import aboutImg from "../assets/about-img.png";
 
 export default function About() {
   const { t } = useTranslation();
 
   return (
     <section id="about" className="mb-12 mt-14">
-      <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pb-24">
+      <div className="relative isolate overflow-hidden pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto flex lg:flex-row flex-col gap-2">
             <div className="relative mx-auto">
               <img
-                src="static/about-img.png"
+                src={aboutImg}
                 alt=""
                 className="mt-10 aspect-[1/1] w-full max-w-md rounded-2xl object-cover shadow-[-2.5rem_-2.5rem_#C1C8CE]"
               />
