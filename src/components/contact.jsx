@@ -89,7 +89,11 @@ export default function Contact() {
               <p className="text-md text-gray-600 mb-4">
                 {t("contactSection.info.description")}
               </p>
-              <img src={locationImage} className="w-full" />
+              <img
+                src={locationImage}
+                className="w-full"
+                alt="Selected Language"
+              />
               <div className="flex flex-col">
                 <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
                   <div className="flex gap-x-2">

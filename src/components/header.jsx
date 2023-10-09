@@ -47,7 +47,7 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <AnchorLink href="#" className="-m-1.5">
-            <img className="h-16 w-auto" src={logo} alt="" />
+            <img className="h-16 w-auto" src={logo} alt="ALS logo" />
           </AnchorLink>
         </div>
         <div className="flex lg:hidden">
@@ -93,6 +93,7 @@ export default function Header() {
                     className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                     aria-hidden="true"
                     src={selectedLanguage.icon}
+                    alt="Language icon"
                   />
                 )}
                 <ChevronDownIcon
@@ -117,14 +118,15 @@ export default function Header() {
                       .map((item) => (
                         <div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-[#252525]"
                         >
                           <Link to={originalPath} language={item.lng}>
-                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-[#252525]">
+                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-[#252525] group-hover:bg-[#252525]">
                               <img
                                 className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                                 aria-hidden="true"
                                 src={item.icon}
+                                alt="Language icon"
                               />
                             </div>
                           </Link>
@@ -148,7 +150,12 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="h-16 w-auto" src={logo} alt="logo" width="300" />
+              <img
+                className="h-16 w-auto"
+                src={logo}
+                alt="ALS logo"
+                width="300"
+              />
             </a>
             <button
               type="button"
@@ -199,6 +206,7 @@ export default function Header() {
                             className="h-6 w-6 text-gray-600 mr-2"
                             aria-hidden="true"
                             src={selectedLanguage.icon}
+                            alt="Selected language icon"
                           />
                         )}
                         <ChevronDownIcon
@@ -222,6 +230,7 @@ export default function Header() {
                                   className="h-6 w-6 text-gray-600"
                                   aria-hidden="true"
                                   src={item.icon}
+                                  alt="Language icon"
                                 />
                               </Disclosure.Button>
                             </Link>

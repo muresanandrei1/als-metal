@@ -77,7 +77,7 @@ const Carousel = () => {
               <img
                 className="embla__slide__img"
                 src={imageByIndex(index)}
-                alt="Your alt text"
+                alt="Image of metal"
               />
             </div>
           ))}

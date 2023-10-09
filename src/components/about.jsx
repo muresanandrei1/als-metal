@@ -14,7 +14,7 @@ export default function About() {
             <div className="relative mx-auto">
               <img
                 src={aboutImg}
-                alt=""
+                alt="Humans working"
                 className="mt-10 aspect-[1/1] w-full max-w-md rounded-2xl object-cover shadow-[-2.5rem_-2.5rem_#C1C8CE]"
               />
             </div>
