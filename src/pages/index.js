@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 import Header from "../components/header";
 import Section1 from "../components/section1";
@@ -13,7 +12,6 @@ import Contact from "../components/contact";
 import favicon from "../assets/favicon-32x32.png";
 
 const IndexPage = () => {
-  const { t } = useTranslation();
   return (
     <>
       <Header />

@@ -59,9 +59,6 @@ const Carousel = () => {
     emblaApi.on("reInit", onScroll);
   }, [emblaApi, onScroll]);
 
-  useEffect(() => {
-    if (emblaApi) console.log(emblaApi.slideNodes());
-  }, [emblaApi]);
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
