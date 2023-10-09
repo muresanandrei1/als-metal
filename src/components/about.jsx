@@ -18,7 +18,7 @@ export default function About() {
                 className="mt-10 aspect-[1/1] w-full max-w-md rounded-2xl object-cover shadow-[-2.5rem_-2.5rem_#C1C8CE]"
               />
             </div>
-            <div className="mx-auto">
+            <div className="mx-auto mt-4 lg:mt-0">
               <h1 className="max-w-2xl text-4xl mb-4 tracking-tight text-gray-900 lg:col-span-2 xl:col-auto after:content-[' '] after:w-[13%] after:h-[12px] after:bg-[#FFCC17] after:block after:mt-3 after:rounded-2xl">
                 <span className="font-bold tracking-wide">
                   {t("aboutSection.titleBold")}{" "}
