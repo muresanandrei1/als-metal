@@ -8,7 +8,7 @@ export default function Contact() {
 
   return (
     <section id="contact">
-      <div className="relative isolate bg-[#FFCC17] py-20 px-10">
+      <div className="relative isolate bg-[#FFCC17] px-4 py-20 md:px-10">
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 bg-white rounded-2xl shadow-[-2rem_2rem_#92858F]">
           <form
             data-netlify="true"

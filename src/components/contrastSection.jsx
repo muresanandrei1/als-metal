@@ -12,7 +12,7 @@ export default function ContrastSection() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto flex flex-col lg:flex-row py-24 gap-24 justify-center items-center">
             <img src={partnerImg} width="130" alt="Humans connecting" />
-            <h1 className="text-white tracking-wider text-justify text-2xl">
+            <h1 className="text-white tracking-wider text-justify text-xl md:text-2xl">
               {t("partnerSection.info1")}
             </h1>
           </div>

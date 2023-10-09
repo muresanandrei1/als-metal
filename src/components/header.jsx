@@ -46,7 +46,7 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <AnchorLink href="#" className="-m-1.5">
+          <AnchorLink to="/" className="-m-1.5">
             <img className="h-16 w-auto" src={logo} alt="ALS logo" />
           </AnchorLink>
         </div>
@@ -148,8 +148,8 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#252525] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5">
-              <span className="sr-only">Your Company</span>
+            <a href="/" className="-m-1.5">
+              <span className="sr-only">ALS Metal-Innovation</span>
               <img
                 className="h-16 w-auto"
                 src={logo}
@@ -159,7 +159,7 @@ export default function Header() {
             </a>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -221,7 +221,11 @@ export default function Header() {
                         {languages
                           .filter((el) => el.lng !== language)
                           .map((item) => (
-                            <Link to={originalPath} language={item.lng}>
+                            <Link
+                              to={originalPath}
+                              language={item.lng}
+                              key={item.lng}
+                            >
                               <Disclosure.Button
                                 key={item.name}
                                 className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-[#252525] group-hover:bg-[#252525]"
