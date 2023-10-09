@@ -47,7 +47,7 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <AnchorLink to="/" className="-m-1.5">
-            <img className="h-16 w-auto" src={logo} alt="ALS logo" />
+            <img className="h-16 w-auto saturate-0" src={logo} alt="ALS logo" />
           </AnchorLink>
         </div>
         <div className="flex lg:hidden">
@@ -151,7 +151,7 @@ export default function Header() {
             <a href="/" className="-m-1.5">
               <span className="sr-only">ALS Metal-Innovation</span>
               <img
-                className="h-16 w-auto"
+                className="h-16 w-auto saturate-0"
                 src={logo}
                 alt="ALS logo"
                 width="300"
