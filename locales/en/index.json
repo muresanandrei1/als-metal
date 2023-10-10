@@ -1,62 +1,62 @@
 {
   "menu": {
-    "about": "Despre noi",
-    "services": "Servicii",
-    "portfolio": "Portofoliu",
+    "about": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
     "contact": "Contact"
   },
   "aboutSection": {
-    "titleBold": "Cine",
-    "titleRest": "suntem",
+    "titleBold": "Who",
+    "titleRest": "We Are",
     "questionMark": "?",
-    "info1": "Ne-am făcut cunoscuți prin profesionalismul nostru, promtitudinea și calitatea excepțională a pieselor. Avem prețuri competitive, o echipă tânără și dinamică care se adaptează ușor la cerințele clienților. Ne străduim să atingem obiectivele noastre cu perseverență și să oferim servicii de cea mai înaltă calitate.",
-    "info2": "Fiecare piesă este supusă unui riguros control al calității și suntem dedicați satisfacerii nevoilor clienților noștri prin soluții personalizate și rezultate impecabile. Suntem flexibili și pregătiți să oferim soluții adaptate pentru diferite tipuri de proiecte. Avem încredere în parteneriate și menținem standarde ridicate în tot ceea ce facem."
+    "info1": "We have made a name for ourselves through our professionalism, promptness, and exceptional quality of parts. We offer competitive prices, a young and dynamic team that easily adapts to client requirements. We strive to achieve our goals with perseverance and provide the highest quality services.",
+    "info2": "Every part undergoes rigorous quality control, and we are dedicated to meeting our clients' needs with personalized solutions and impeccable results. We are flexible and prepared to offer tailored solutions for various types of projects. We trust in partnerships and maintain high standards in everything we do."
   },
   "partnerSection": {
-    "info1": "Suntem parteneri de încredere pentru companii locale și internaționale în fabricarea de piese consumabile pentru ansamblurile din diverse industrii. Ne concentrăm pe livrarea de piese de cea mai înaltă calitate, care să corespundă în totalitate specificațiilor și cerințelor clienților noștri."
+    "info1": "We are trusted partners for local and international companies in the production of consumable parts for assemblies in various industries. We focus on delivering the highest quality parts that fully meet the specifications and requirements of our clients."
   },
   "servicesSection": {
-    "titleBold": "Serviciile",
-    "titleRest": "Noastre",
-    "info1": "Suntem specializați în furnizarea serviciilor de frezare pentru o gamă diversificată de piese, ansamble și subansamble, fabricate din materiale precum:",
-    "item1": "oțel",
-    "item2": "aluminiu",
-    "item3": "alamă",
-    "item4": "cupru",
+    "titleBold": "Our",
+    "titleRest": "Services",
+    "info1": "We specialize in providing milling services for a diverse range of parts, assemblies, and sub-assemblies made from materials such as:",
+    "item1": "steel",
+    "item2": "aluminum",
+    "item3": "brass",
+    "item4": "copper",
     "item5": "plastic"
   },
   "infoSection": {
-    "title": "Executăm",
-    "info1": " aceste componente conform desenelor tehnice și modelele prezentate de clienți. Indiferent dacă este vorba de producție în serie sau de piese unicate, suntem echipați pentru a le realiza. Pentru verificarea dimensionala si a conditiilor de aspect a pieselor executate, dispunem de o gama variata de instrumente de masura si control moderne."
+    "title": "We Manufacture",
+    "info1": "these components according to technical drawings and models provided by clients. Whether it's mass production or unique pieces, we are equipped to make them. For dimensional and visual inspection of the manufactured parts, we have a wide range of modern measuring and control instruments."
   },
   "objectivesSection": {
-    "title": "Obiectivele principale ale companiei",
-    "item1": "Îmbunătățirea continuă a proceselor tehnologice",
-    "item2": "Dezvoltarea și menținerea portofoliului de clienți: Avem ca obiectiv să menținem relațiile cu clienții existenți și să atragem noi clienți din țară și din străinătate.",
-    "item3": "Achiziționarea unui echipament de măsurat în coordonate",
-    "item4": "Achiziționarea de utilaje moderne: Ne propunem să investim în achiziționarea de utilaje moderne și performante pentru a răspunde rapid și eficient cerințelor clienților noștri."
+    "title": "Company's Main Objectives",
+    "item1": "Continuous improvement of technological processes",
+    "item2": "Development and maintenance of the client portfolio: Our goal is to maintain relationships with existing clients and attract new clients from both the domestic and international markets.",
+    "item3": "Acquisition of coordinate measuring equipment",
+    "item4": "Acquisition of modern machinery: We aim to invest in modern and efficient machinery to quickly and efficiently meet our clients' requirements."
   },
   "portfolioSection": {
-    "title": "Portofoliu",
-    "subtitle": "Arta preciziei"
+    "title": "Portfolio",
+    "subtitle": "The Art of Precision"
   },
   "contactSection": {
     "title": "Contact",
     "fields": {
-      "name": "Nume",
+      "name": "Name",
       "email": "Email",
-      "message": "Mesaj",
-      "send": "Trimite"
+      "message": "Message",
+      "send": "Send"
     },
     "info": {
-      "description": "ALS Metal-Innovation S.R.L. a fost înființată în anul 2021 ca societate comercială cu răspundere limitată, având capital privat românesc integral. Punctul de lucru al firmei este situat în orașul Cluj-Napoca, județul Cluj.",
+      "description": "ALS Metal-Innovation S.R.L. was established in 2021 as a fully Romanian-owned limited liability company. The company's office is located in Cluj-Napoca city, Cluj County.",
       "town": "Cluj-Napoca",
       "emailLabel": "Email",
-      "phoneLabel": "Telefon",
-      "addressLabel": "Adresă",
-      "juridicInfo": "Informații juridice",
-      "nameLabel": "Denumire",
-      "taxIdNumberLabel": "CUI"
+      "phoneLabel": "Phone",
+      "addressLabel": "Address",
+      "juridicInfo": "Legal Information",
+      "nameLabel": "Name",
+      "taxIdNumberLabel": "Tax ID"
     }
   }
 }
