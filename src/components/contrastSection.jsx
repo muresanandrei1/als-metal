@@ -8,7 +8,7 @@ export default function ContrastSection() {
 
   return (
     <section id="contrast">
-      <div className="relative isolate overflow-hidden bg-[#252525]">
+      <div className="relative isolate bg-[#252525]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto flex flex-col lg:flex-row py-24 gap-24 justify-center items-center">
             <img src={partnerImg} width="130" alt="Humans connecting" />

@@ -92,7 +92,7 @@ export default function Portoflio() {
 
   return (
     <section id="portfolio">
-      <div className="relative isolate overflow-hidden bg-gradient-to-b bg-[#252525] pb-24">
+      <div className="relative isolate bg-gradient-to-b bg-[#252525] pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 flex-col">
           <div className="text-center mt-12">
             <h1 className="text-4xl uppercase text-white tracking-widest font-medium">

@@ -34,9 +34,11 @@ export default function Header() {
   const { t } = useTranslation();
   const { originalPath, language } = useI18next();
   const navigateToAnchor = (anchor) => {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-    document.getElementById(anchor).scrollIntoView();
-    setTimeout(() => setMobileMenuOpen(false), 300);
+    setMobileMenuOpen(false);
+    setTimeout(() => {
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      document.getElementById(anchor).scrollIntoView();
+    }, 300);
   };
 
   useEffect(() => {
@@ -120,7 +122,7 @@ export default function Header() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute top-full z-10 mt-3 overflow-hidden rounded-3xl bg-[#252525] shadow-lg ring-1 ring-gray-900/5">
+                <Popover.Panel className="absolute top-full z-10 mt-3 rounded-3xl bg-[#252525] shadow-lg ring-1 ring-gray-900/5">
                   <div>
                     {languages
                       .filter((el) => el.lng !== language)
@@ -155,7 +157,7 @@ export default function Header() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#252525] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full bg-[#252525] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="/" className="-m-1.5">
               <span className="sr-only">ALS Metal-Innovation</span>

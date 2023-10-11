@@ -8,7 +8,7 @@ export default function YellowSection() {
 
   return (
     <section id="yellow">
-      <div className="relative isolate overflow-hidden mb-24 h-[500px] lg:h-[420px] relative flex">
+      <div className="relative isolate mb-24 h-[500px] lg:h-[420px] relative flex">
         <div className="pointer-events-none absolute w-[150%] 2xl:w-[120%] bottom-[-200px] right-[-100px] bg-[#FFD600] h-[650px] lg:h-[440px] rotate-[350deg]" />
         <div className="mx-auto mt-10 max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row justify-end relative z-2 align-center lg:mt-auto lg:ml-auto lg:mr-[100px] gap-4 md:gap-6 lg:gap-10 mb-12">
           <img
