@@ -8,9 +8,6 @@ export default function About() {
 
   return (
     <section id="about" className="mb-12 mt-14">
-      <a name="about" id="about">
-        &nbsp;
-      </a>
       <div className="relative isolate overflow-hidden pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto flex lg:flex-row flex-col gap-2">

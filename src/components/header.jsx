@@ -33,6 +33,10 @@ export default function Header() {
   const [selectedLanguage, setSelectedLanguage] = useState();
   const { t } = useTranslation();
   const { originalPath, language } = useI18next();
+  const navigateToAnchor = (anchor) => {
+    document.getElementById(anchor).scrollIntoView();
+    setMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     const selectedLng = languages.find((el) => el.lng === language);
@@ -174,38 +178,26 @@ export default function Header() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <a
-                  href={language === "en" ? "/en/#services" : "/#services"}
                   className="text-xl leading-6 text-white py-1 block"
-                  onClick={() =>
-                    setTimeout(() => setMobileMenuOpen(false), 200)
-                  }
+                  onClick={() => navigateToAnchor("services")}
                 >
                   <p>{t("menu.services")}</p>
                 </a>
                 <a
-                  href={language === "en" ? "/en/#about" : "/#about"}
                   className="text-xl leading-6 text-white py-1 block"
-                  onClick={() =>
-                    setTimeout(() => setMobileMenuOpen(false), 200)
-                  }
+                  onClick={() => navigateToAnchor("about")}
                 >
                   <p>{t("menu.about")}</p>
                 </a>
                 <a
-                  href={language === "en" ? "/en/#portfolio" : "/#portfolio"}
                   className="text-xl leading-6 text-white py-1 block"
-                  onClick={() =>
-                    setTimeout(() => setMobileMenuOpen(false), 200)
-                  }
+                  onClick={() => navigateToAnchor("portfolio")}
                 >
                   <p>{t("menu.portfolio")}</p>
                 </a>
                 <a
-                  href={language === "en" ? "/en/#contact" : "/#contact"}
                   className="text-xl leading-6 text-white py-1 block"
-                  onClick={() =>
-                    setTimeout(() => setMobileMenuOpen(false), 200)
-                  }
+                  onClick={() => navigateToAnchor("contact")}
                 >
                   <p>{t("menu.contact")}</p>
                 </a>

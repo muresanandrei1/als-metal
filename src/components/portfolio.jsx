@@ -92,9 +92,6 @@ export default function Portoflio() {
 
   return (
     <section id="portfolio">
-      <a name="portfolio" id="portfolio">
-        &nbsp;
-      </a>
       <div className="relative isolate overflow-hidden bg-gradient-to-b bg-[#252525] pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 flex-col">
           <div className="text-center mt-12">
