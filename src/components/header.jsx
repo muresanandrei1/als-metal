@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { useTranslation, Link, useI18next } from "gatsby-plugin-react-i18next";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
@@ -33,6 +33,11 @@ export default function Header() {
   const [selectedLanguage, setSelectedLanguage] = useState();
   const { t } = useTranslation();
   const { originalPath, language } = useI18next();
+  const navigateToAnchor = (anchor) => {
+    const path = language === "en" ? `/en/#${anchor}` : `/#${anchor}`;
+    navigate(path);
+    setTimeout(() => setMobileMenuOpen(false), 200);
+  };
 
   useEffect(() => {
     const selectedLng = languages.find((el) => el.lng === language);
@@ -173,42 +178,30 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href={language === "en" ? "/en/#services" : "/#services"}
+                <p
                   className="text-xl leading-6 text-white py-1 block"
-                  onClick={() =>
-                    setTimeout(() => setMobileMenuOpen(false), 200)
-                  }
+                  onClick={() => navigateToAnchor("services")}
                 >
-                  <p>{t("menu.services")}</p>
-                </a>
-                <a
-                  href={language === "en" ? "/en/#about" : "/#about"}
+                  {t("menu.services")}
+                </p>
+                <p
                   className="text-xl leading-6 text-white py-1 block"
-                  onClick={() =>
-                    setTimeout(() => setMobileMenuOpen(false), 200)
-                  }
+                  onClick={() => navigateToAnchor("about")}
                 >
-                  <p>{t("menu.about")}</p>
-                </a>
-                <a
-                  href={language === "en" ? "/en/#portfolio" : "/#portfolio"}
+                  {t("menu.about")}
+                </p>
+                <p
                   className="text-xl leading-6 text-white py-1 block"
-                  onClick={() =>
-                    setTimeout(() => setMobileMenuOpen(false), 200)
-                  }
+                  onClick={() => navigateToAnchor("portfolio")}
                 >
-                  <p>{t("menu.portfolio")}</p>
-                </a>
-                <a
-                  href={language === "en" ? "/en/#contact" : "/#contact"}
+                  {t("menu.portfolio")}
+                </p>
+                <p
                   className="text-xl leading-6 text-white py-1 block"
-                  onClick={() =>
-                    setTimeout(() => setMobileMenuOpen(false), 200)
-                  }
+                  onClick={() => navigateToAnchor("contact")}
                 >
-                  <p>{t("menu.contact")}</p>
-                </a>
+                  {t("menu.contact")}
+                </p>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
