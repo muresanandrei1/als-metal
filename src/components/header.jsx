@@ -34,7 +34,9 @@ export default function Header() {
   const { t } = useTranslation();
   const { originalPath, language } = useI18next();
   const navigateToAnchor = (anchor) => {
-    const path = language === "en" ? `en/#${anchor}` : `#${anchor}`;
+    const baseurl = "https://alsmetalinnovation.ro";
+    const path =
+      language === "en" ? `${baseurl}/en/#${anchor}` : `${baseurl}/#${anchor}`;
     navigate(path);
     setTimeout(() => setMobileMenuOpen(false), 200);
   };
