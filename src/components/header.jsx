@@ -66,7 +66,6 @@ export default function Header() {
               stripHash
               to={language === "en" ? "/en/#services" : "/#services"}
               className="text-sm font-semibold leading-6 text-white"
-              // gatsbyLinkProps
             >
               <p>{t("menu.services")}</p>
             </AnchorLink>
@@ -178,7 +177,7 @@ export default function Header() {
                   stripHash
                   to={language === "en" ? "/en/#services" : "/#services"}
                   className="text-xl leading-6 text-white py-1 block"
-                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                  // onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
                   <p>{t("menu.services")}</p>
                 </AnchorLink>
@@ -186,7 +185,7 @@ export default function Header() {
                   stripHash
                   to={language === "en" ? "/en/#about" : "/#about"}
                   className="text-xl leading-6 text-white py-1 block"
-                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                  // onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
                   <p>{t("menu.about")}</p>
                 </AnchorLink>
@@ -194,7 +193,7 @@ export default function Header() {
                   stripHash
                   to={language === "en" ? "/en/#portfolio" : "/#portfolio"}
                   className="text-xl leading-6 text-white py-1 block"
-                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                  // onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
                   <p>{t("menu.portfolio")}</p>
                 </AnchorLink>
@@ -202,7 +201,7 @@ export default function Header() {
                   stripHash
                   to={language === "en" ? "/en/#contact" : "/#contact"}
                   className="text-xl leading-6 text-white py-1 block"
-                  onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                  // onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
                   <p>{t("menu.contact")}</p>
                 </AnchorLink>
