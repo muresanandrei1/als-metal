@@ -38,7 +38,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services">
+    <section id="services" className="scroll-m-[120px]">
       <div className="isolate mb-40 mt-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="uppercase text-center text-4xl leading-8 text-gray-900 font-uppercase mb-4 tracking-widest">
