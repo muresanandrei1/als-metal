@@ -34,8 +34,9 @@ export default function Header() {
   const { t } = useTranslation();
   const { originalPath, language } = useI18next();
   const navigateToAnchor = (anchor) => {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     document.getElementById(anchor).scrollIntoView();
-    setMobileMenuOpen(false);
+    setTimeout(() => setMobileMenuOpen(false), 300);
   };
 
   useEffect(() => {
