@@ -46,7 +46,7 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <AnchorLink to="/" className="-m-1.5">
+          <AnchorLink stripHash to="/" className="-m-1.5">
             <img className="h-16 w-auto saturate-0" src={logo} alt="ALS logo" />
           </AnchorLink>
         </div>
@@ -63,6 +63,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end bg-[#252525]">
           <Popover.Group className="hidden lg:flex lg:gap-x-12 bg-[#252525]">
             <AnchorLink
+              stripHash
               to={language === "en" ? "/en/#services" : "/#services"}
               className="text-sm font-semibold leading-6 text-white"
               // gatsbyLinkProps
@@ -70,18 +71,21 @@ export default function Header() {
               <p>{t("menu.services")}</p>
             </AnchorLink>
             <AnchorLink
+              stripHash
               to={language === "en" ? "/en/#about" : "/#about"}
               className="text-sm font-semibold leading-6 text-white"
             >
               <p>{t("menu.about")}</p>
             </AnchorLink>
             <AnchorLink
+              stripHash
               to={language === "en" ? "/en/#portfolio" : "/#portfolio"}
               className="text-sm font-semibold leading-6 text-white"
             >
               <p>{t("menu.portfolio")}</p>
             </AnchorLink>
             <AnchorLink
+              stripHash
               to={language === "en" ? "/en/#contact" : "/#contact"}
               className="text-sm font-semibold leading-6 text-white"
             >
@@ -171,6 +175,7 @@ export default function Header() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <AnchorLink
+                  stripHash
                   to={language === "en" ? "/en/#services" : "/#services"}
                   className="text-xl leading-6 text-white py-1 block"
                   onAnchorLinkClick={() => setMobileMenuOpen(false)}
@@ -178,6 +183,7 @@ export default function Header() {
                   <p>{t("menu.services")}</p>
                 </AnchorLink>
                 <AnchorLink
+                  stripHash
                   to={language === "en" ? "/en/#about" : "/#about"}
                   className="text-xl leading-6 text-white py-1 block"
                   onAnchorLinkClick={() => setMobileMenuOpen(false)}
@@ -185,6 +191,7 @@ export default function Header() {
                   <p>{t("menu.about")}</p>
                 </AnchorLink>
                 <AnchorLink
+                  stripHash
                   to={language === "en" ? "/en/#portfolio" : "/#portfolio"}
                   className="text-xl leading-6 text-white py-1 block"
                   onAnchorLinkClick={() => setMobileMenuOpen(false)}
@@ -192,6 +199,7 @@ export default function Header() {
                   <p>{t("menu.portfolio")}</p>
                 </AnchorLink>
                 <AnchorLink
+                  stripHash
                   to={language === "en" ? "/en/#contact" : "/#contact"}
                   className="text-xl leading-6 text-white py-1 block"
                   onAnchorLinkClick={() => setMobileMenuOpen(false)}
