@@ -34,7 +34,7 @@ export default function Header() {
   const { t } = useTranslation();
   const { originalPath, language } = useI18next();
   const navigateToAnchor = (anchor) => {
-    const path = language === "en" ? `/en/#${anchor}` : `/#${anchor}`;
+    const path = language === "en" ? `en/#${anchor}` : `#${anchor}`;
     navigate(path);
     setTimeout(() => setMobileMenuOpen(false), 200);
   };
