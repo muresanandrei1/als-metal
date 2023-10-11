@@ -63,25 +63,26 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end bg-[#252525]">
           <Popover.Group className="hidden lg:flex lg:gap-x-12 bg-[#252525]">
             <AnchorLink
-              to="/#services"
+              to={language === "en" ? "/en/#services" : "/#services"}
               className="text-sm font-semibold leading-6 text-white"
+              // gatsbyLinkProps
             >
               <p>{t("menu.services")}</p>
             </AnchorLink>
             <AnchorLink
-              to="/#about"
+              to={language === "en" ? "/en/#about" : "/#about"}
               className="text-sm font-semibold leading-6 text-white"
             >
               <p>{t("menu.about")}</p>
             </AnchorLink>
             <AnchorLink
-              to="/#portfolio"
+              to={language === "en" ? "/en/#portfolio" : "/#portfolio"}
               className="text-sm font-semibold leading-6 text-white"
             >
               <p>{t("menu.portfolio")}</p>
             </AnchorLink>
             <AnchorLink
-              to="/#contact"
+              to={language === "en" ? "/en/#contact" : "/#contact"}
               className="text-sm font-semibold leading-6 text-white"
             >
               <p>{t("menu.contact")}</p>
@@ -170,28 +171,28 @@ export default function Header() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <AnchorLink
-                  to="/#services"
+                  to={language === "en" ? "/en/#services" : "/#services"}
                   className="text-xl leading-6 text-white py-1 block"
                   onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
                   <p>{t("menu.services")}</p>
                 </AnchorLink>
                 <AnchorLink
-                  to="/#about"
+                  to={language === "en" ? "/en/#about" : "/#about"}
                   className="text-xl leading-6 text-white py-1 block"
                   onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
                   <p>{t("menu.about")}</p>
                 </AnchorLink>
                 <AnchorLink
-                  to="/#portfolio"
+                  to={language === "en" ? "/en/#portfolio" : "/#portfolio"}
                   className="text-xl leading-6 text-white py-1 block"
                   onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
                   <p>{t("menu.portfolio")}</p>
                 </AnchorLink>
                 <AnchorLink
-                  to="/#contact"
+                  to={language === "en" ? "/en/#contact" : "/#contact"}
                   className="text-xl leading-6 text-white py-1 block"
                   onAnchorLinkClick={() => setMobileMenuOpen(false)}
                 >
