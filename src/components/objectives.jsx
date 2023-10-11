@@ -6,7 +6,10 @@ export default function Objectives() {
   const { t } = useTranslation();
 
   return (
-    <section id="about">
+    <section id="objectives">
+      <a name="objectives" id="objectives">
+        &nbsp;
+      </a>
       <div className="mx-auto mt-20 mb-20 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
           <h1 className="text-center text-3xl">
