@@ -173,38 +173,42 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <AnchorLink
-                  stripHash
-                  to={language === "en" ? "/en/#services" : "/#services"}
+                <a
+                  href={language === "en" ? "/en/#services" : "/#services"}
                   className="text-xl leading-6 text-white py-1 block"
-                  // onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                  onClick={() =>
+                    setTimeout(() => setMobileMenuOpen(false), 200)
+                  }
                 >
                   <p>{t("menu.services")}</p>
-                </AnchorLink>
-                <AnchorLink
-                  stripHash
-                  to={language === "en" ? "/en/#about" : "/#about"}
+                </a>
+                <a
+                  href={language === "en" ? "/en/#about" : "/#about"}
                   className="text-xl leading-6 text-white py-1 block"
-                  // onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                  onClick={() =>
+                    setTimeout(() => setMobileMenuOpen(false), 200)
+                  }
                 >
                   <p>{t("menu.about")}</p>
-                </AnchorLink>
-                <AnchorLink
-                  stripHash
-                  to={language === "en" ? "/en/#portfolio" : "/#portfolio"}
+                </a>
+                <a
+                  href={language === "en" ? "/en/#portfolio" : "/#portfolio"}
                   className="text-xl leading-6 text-white py-1 block"
-                  // onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                  onClick={() =>
+                    setTimeout(() => setMobileMenuOpen(false), 200)
+                  }
                 >
                   <p>{t("menu.portfolio")}</p>
-                </AnchorLink>
-                <AnchorLink
-                  stripHash
-                  to={language === "en" ? "/en/#contact" : "/#contact"}
+                </a>
+                <a
+                  href={language === "en" ? "/en/#contact" : "/#contact"}
                   className="text-xl leading-6 text-white py-1 block"
-                  // onAnchorLinkClick={() => setMobileMenuOpen(false)}
+                  onClick={() =>
+                    setTimeout(() => setMobileMenuOpen(false), 200)
+                  }
                 >
                   <p>{t("menu.contact")}</p>
-                </AnchorLink>
+                </a>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
